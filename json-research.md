@@ -3,4 +3,5 @@ User
   
   
 Tweet
-  id lang
+  id lang coordinates(optional)
+  user_id -> User.id
