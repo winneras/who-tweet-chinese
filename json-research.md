@@ -48,3 +48,7 @@ Tweet
 她3118
 好3104
 年2990
+
+
+
+curl --get 'https://api.twitter.com/1.1/search/tweets.json' --data 'count=1&lang=zh&q=%E7%9A%84+OR+%E4%BA%86+OR+%E6%98%AF+OR+%E4%B8%8D+OR+%E5%9C%A8+OR+%E6%9C%89+OR+%E6%88%91+OR+%E4%BB%96+OR+%E5%B0%B1+OR+%E4%B9%9F+OR+%E4%BD%A0+OR+%E5%88%B0+OR+%E6%9D%A5+OR+%E8%BF%98+OR+%E6%8A%8A+OR+%E5%8E%BB+OR+%E9%82%A3&result_type=recent' --header 'Authorization: OAuth oauth_consumer_key="cY0UcnKfIW8dxtgSjsq6Q", oauth_nonce="757bcb0aec780958b1c80fd75b584833", oauth_signature="yaisPtHQ7F42MPPaVeY2wbc5hZc%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1381833185", oauth_token="101053711-asAONJVYIY5CuirdYaklSw7iepOGc41TY39q2Yc3", oauth_version="1.0"' --verbose
