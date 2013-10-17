@@ -1,13 +1,6 @@
 <?php
 
-require_once('TwitterAPIExchange.php');
-
-$settings = array(
-    'oauth_access_token' => "",
-    'oauth_access_token_secret' => "",
-    'consumer_key' => "",
-    'consumer_secret' => ""
-);
+require_once('config.php');
 
 $url = 'https://api.twitter.com/1.1/search/tweets.json';
 //$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
@@ -15,7 +8,7 @@ $requestMethod = 'GET';
 
 $getfield = '?count=3&lang=zh&q=%E7%9A%84+OR+%E4%BA%86+OR+%E6%98%AF+OR+%E4%B8%8D+OR+%E5%9C%A8+OR+%E6%9C%89+OR+%E6%88%91+OR+%E4%BB%96+OR+%E5%B0%B1+OR+%E4%B9%9F+OR+%E4%BD%A0+OR+%E5%88%B0+OR+%E6%9D%A5+OR+%E8%BF%98+OR+%E6%8A%8A+OR+%E5%8E%BB+OR+%E9%82%A3&result_type=recent';
 
-$twitter = new TwitterAPIExchange($settings);
+$twitter = new TwitterAPIExchange($twitterSettings);
 $response = $twitter->setGetfield($getfield)
         ->buildOauth($url, $requestMethod)
         ->performRequest();
